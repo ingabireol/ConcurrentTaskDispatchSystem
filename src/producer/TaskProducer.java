@@ -1,5 +1,8 @@
 package model;
 
+import model.entity.Task;
+import model.entity.TaskStatus;
+
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
