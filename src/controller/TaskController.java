@@ -36,38 +36,63 @@ public class TaskController {
         this.maxRetries = maxRetries;
         logger.info("Task controller initialized with max retries: {}", maxRetries);
     }
-    
+
     /**
-     * Submit a new task to the system
+     * Submit a new task to the system - IMPROVED VERSION
      */
     public boolean submitTask(Task task) {
         logger.info("Submitting task: {}", task.getName());
-        
+
         try {
-            // Save to repository
-            taskRepository.save(task, TaskStatus.SUBMITTED);
-            
-            // Add to queue
+            // Add to queue first (this is the critical operation)
             boolean queued = queueService.offer(task);
-            
-            if (queued) {
-                // Update metrics
-                metricsService.recordTaskSubmission();
-                
-                // Update view
-                consoleView.getTaskDisplayView().displayTaskSubmitted(task);
-                
-                logger.info("Task {} successfully submitted", task.getId());
-                return true;
-            } else {
+
+            if (!queued) {
                 logger.error("Failed to queue task: {}", task.getId());
-                taskRepository.updateStatus(task.getId(), TaskStatus.FAILED);
                 return false;
             }
-            
+
+            // Try to save to repository (non-critical for task processing)
+            try {
+                taskRepository.save(task, TaskStatus.SUBMITTED);
+            } catch (Exception repoError) {
+                logger.warn("Repository save failed for task {}, but task is queued: {}",
+                        task.getId(), repoError.getMessage());
+                // Continue - the task is still queued and can be processed
+            }
+
+            // Update metrics
+            metricsService.recordTaskSubmission();
+
+            // Update view
+            try {
+                consoleView.getTaskDisplayView().displayTaskSubmitted(task);
+            } catch (Exception viewError) {
+                logger.warn("View update failed for task {}: {}", task.getId(), viewError.getMessage());
+                // Continue - this is not critical
+            }
+
+            logger.info("Task {} successfully submitted", task.getId());
+            return true;
+
         } catch (Exception e) {
             logger.error("Error submitting task: {}", task.getId(), e);
-            consoleView.displayError("Failed to submit task: " + task.getName(), e);
+
+            // Try to update repository status if possible
+            try {
+                taskRepository.updateStatus(task.getId(), TaskStatus.FAILED);
+            } catch (Exception repoError) {
+                logger.warn("Failed to update repository status for failed task {}", task.getId());
+            }
+
+            // Always try to show error to user
+            try {
+                consoleView.displayError("Failed to submit task: " + task.getName(), e);
+            } catch (Exception viewError) {
+                // Last resort - log to console
+                System.err.println("CRITICAL: Failed to submit task " + task.getName() + " - " + e.getMessage());
+            }
+
             return false;
         }
     }
