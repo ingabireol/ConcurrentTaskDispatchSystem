@@ -1,0 +1,4 @@
+[2025-06-23 00:18:44.205] [main] [INFO] [MonitoringController] Monitoring controller initialized
+[2025-06-23 00:18:44.238] [main] [INFO] [MonitoringController] Monitoring started - health check: 5s, performance: 30s, reports: 2m
+[2025-06-23 00:20:14.531] [main] [INFO] [MonitoringController] Stopping monitoring...
+[2025-06-23 00:20:14.533] [main] [INFO] [MonitoringController] Monitoring stopped

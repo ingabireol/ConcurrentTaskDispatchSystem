@@ -1,0 +1,31 @@
+[2025-06-23 00:18:44.145] [main] [INFO] [SystemController] System controller initialized
+[2025-06-23 00:18:44.207] [main] [INFO] [SystemController] Starting ConcurQueue system with 4 workers
+[2025-06-23 00:18:44.226] [main] [INFO] [SystemController] Periodic monitoring started (5-second intervals)
+[2025-06-23 00:18:44.228] [main] [INFO] [SystemController] Periodic export started (60-second intervals)
+[2025-06-23 00:18:44.229] [main] [INFO] [SystemController] System startup completed
+[2025-06-23 00:18:49.236] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:18:54.230] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:18:59.235] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:04.235] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:09.235] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:14.230] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:19.225] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:24.234] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:29.239] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:34.228] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:39.227] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:44.227] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:49.233] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:54.231] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:19:59.225] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:04.227] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:09.237] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:14.229] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:19.231] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:24.230] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:29.228] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:34.230] [pool-1-thread-1] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:39.234] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:44.230] [pool-1-thread-2] [ERROR] [SystemController] Error during periodic monitoring - Exception: Unsupported field: YearOfEra
+[2025-06-23 00:20:44.549] [main] [INFO] [SystemController] Initiating system shutdown
+[2025-06-23 00:20:44.551] [main] [INFO] [SystemController] System shutdown completed

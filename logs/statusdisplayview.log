@@ -1,0 +1,6 @@
+[2025-06-23 00:18:44.522] [main] [INFO] [StatusDisplayView] Producer started: Producer-HighPriority-Producer
+[2025-06-23 00:18:44.526] [main] [INFO] [StatusDisplayView] Producer started: Producer-Regular-Producer
+[2025-06-23 00:18:44.528] [main] [INFO] [StatusDisplayView] Producer started: Producer-Background-Producer
+[2025-06-23 00:20:14.530] [main] [INFO] [StatusDisplayView] Producer stopped: Producer-HighPriority-Producer
+[2025-06-23 00:20:14.530] [main] [INFO] [StatusDisplayView] Producer stopped: Producer-Regular-Producer
+[2025-06-23 00:20:14.531] [main] [INFO] [StatusDisplayView] Producer stopped: Producer-Background-Producer

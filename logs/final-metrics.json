@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-06-22T22:20:44.551452300Z",
+  "systemMetrics": {
+    "tasksSubmitted": 130,
+    "tasksCompleted": 0,
+    "tasksFailed": 520,
+    "tasksInProgress": 0,
+    "totalProcessingTime": 0,
+    "averageProcessingTime": 0.0,
+    "completionRate": 0.0,
+    "uptimeSeconds": 121
+  },
+  "currentState": {
+    "queueSize": 0,
+    "activeThreads": 0
+  }
+}
